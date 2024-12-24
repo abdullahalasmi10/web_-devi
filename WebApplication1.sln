@@ -9,7 +9,7 @@ Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
+	EndGlobalSection //şuna dikkat
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{2646D37F-8B87-4BFB-BCC6-4D7540A9F407}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2646D37F-8B87-4BFB-BCC6-4D7540A9F407}.Debug|Any CPU.Build.0 = Debug|Any CPU
