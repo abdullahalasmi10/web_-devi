@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
 
-//ali
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
