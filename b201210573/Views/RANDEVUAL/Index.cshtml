@@ -1,0 +1,100 @@
+﻿@model B201210597.Models.DTO.SonRandevu
+
+
+
+ <div class="container mt-3">
+		<div class="row justify-content-center">
+			<div class="col-md-6">
+<form method="post" >
+	<div class="border p-3 mt-4">
+		<div class="row pb-2">
+			<h2 class="text-primary">Bilgiler</h2>
+			<hr />
+		</div>
+
+                    <label>Department Sec</label>
+
+
+                    <select asp-for="Department" class="form-control select2" id="DepartmentId" style="width: 100%;">
+    <option selected="selected" value="">Bos!</option>
+    @if (Model != null && Model.Departments != null)
+    {
+        @foreach (var x in Model.Departments)
+        {
+                                <option value="@x.DepartmentName">@x.DepartmentName</option>
+        }
+    }
+</select>
+
+
+    	<div class="mb-3">
+                        <label>Klinik Sec</label>
+
+
+						<select asp-for="salon" class="form-control select2" id="salonId" style="width: 100%;">
+    <option selected="selected" value="">Bos!</option>
+    @if (Model != null && Model.salons != null)
+    {
+        @foreach (var x in Model.salons)
+        {
+            <option value="@x.salonName">@x.salonName</option>
+        }
+    }
+</select>
+
+															
+		</div>
+
+ <label>koafor Sec</label>
+
+
+                    <select asp-for="koafor" class="form-control select2" id="koaforId" style="width: 100%;">
+    <option selected="selected" value="">Bos!</option>
+    @if (Model != null && Model.koafors != null)
+    {
+        @foreach (var x in Model.koafors)
+        {
+
+
+                                <option value="@x.koaforName">@x.koaforName</option>
+            
+
+        }
+    }
+</select>
+                    <label>GunLer Sec</label>
+                    <select asp-for="IsGunler" class="form-control select2" id="IsGunler" style="width: 100%;">
+                        <option selected="selected" value="">Bos!</option>
+                        @if (Model != null && Model.koafors != null)
+                        {
+                            @foreach (var x in Model.koafors)
+                            {
+                                <option value="@x.WorkingDays">@x.WorkingDays</option>
+                            }
+                        }
+                    </select>
+
+                    <label>Saat Sec</label>
+                    <select asp-for="IsSaat" class="form-control select2" id="IsSaat" style="width: 100%;">
+                        <option selected="selected" value="">Bos!</option>
+                        @if (Model != null && Model.koafors != null)
+                        {
+                            @foreach (var x in Model.koafors)
+                            {
+                                <option value="@x.WorkingHours">@x.WorkingHours</option>
+                            }
+                        }
+                    </select>   <button type="submit" class="btn btn-primary" style="width:150px">Ekle</button>
+                    <a asp-controller="KontrolPaneliDenetleyici" asp-action="Display" class="btn btn-secondary" style="width:150px">
+                        Geri Don
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+@section Scripts{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
