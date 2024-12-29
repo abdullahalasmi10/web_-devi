@@ -1,0 +1,58 @@
+﻿@model B201210597.Models.DTO.SonRandevu
+﻿@{
+    string username = User.Identity.Name;
+}
+<div>
+
+    <H1>Merhaba</H1> @username
+</div>
+
+
+
+
+
+
+<div class="container mt-3">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="border p-3 mt-4">
+                <div class="row pb-2">
+                    <h2 class="text-primary">Rezervasyon detayları</h2>
+                    <hr />
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Department">Kullanici Adi:</label>
+                    <span>@username</span>
+                </div>
+                
+                <div class="mb-3">
+                    <label asp-for="Department">Department:</label>
+                    <span>@Model.Department</span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="salon">salon:</label>
+                    <span>@Model.salon</span>`
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="koafor">koafor:</label>
+                    <span>@Model.koafor</span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="IsGunler">GunLer:</label>
+                    <span>@Model.IsGunler</span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="IsSaat">Saat:</label>
+                    <span>@Model.IsSaat</span>
+                </div>
+
+                <a asp-controller="Home" asp-action="Index" class="btn btn-primary">
+Ana sayfaya git                </a>
+            </div>
+        </div>
+    </div>
+</div>
